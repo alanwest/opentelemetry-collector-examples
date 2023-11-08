@@ -19,5 +19,6 @@ services:
     environment:
       - OTEL_SERVICE_NAME=SampleDotnetApp
       - OTEL_EXPORTER_OTLP_ENDPOINT=http://otel-collector:4317
+      - OTEL_EXPORTER_OTLP_METRICS_TEMPORALITY_PREFERENCE=DELTA
     ports:
       - "8080:80"
