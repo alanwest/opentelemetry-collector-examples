@@ -18,17 +18,17 @@ connectors:
       - name: http.method
         default: GET
       - name: http.status_code
-    exemplars:
-      enabled: true
+    # exemplars:
+    #   enabled: true
     exclude_dimensions: ['status.code']
     dimensions_cache_size: 1000
     aggregation_temporality: "AGGREGATION_TEMPORALITY_DELTA"    
     metrics_flush_interval: 15s
-    events:
-      enabled: true
-      dimensions:
-        - name: exception.type
-        - name: exception.message
+    # events:
+    #   enabled: true
+    #   dimensions:
+    #     - name: exception.type
+    #     - name: exception.message
 
 exporters:
   logging:
